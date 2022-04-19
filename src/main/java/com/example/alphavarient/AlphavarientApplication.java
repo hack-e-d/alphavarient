@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AlphavarientApplication {
 
-    Logger logger = new Logger();
-
     public static void main(String[] args) {
 
         SpringApplication.run(AlphavarientApplication.class, args);
