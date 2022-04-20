@@ -14,4 +14,11 @@ public class HealthCheckResponse {
     public HealthCheckResponse(String status) {
         setSTATUS(status);
     }
+
+    @Override
+    public String toString() {
+        return "HealthCheckResponse{" +
+                "STATUS='" + STATUS + '\'' +
+                '}';
+    }
 }

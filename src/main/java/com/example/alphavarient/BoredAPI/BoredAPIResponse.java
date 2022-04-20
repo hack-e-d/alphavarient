@@ -9,7 +9,15 @@ import java.util.List;
 
 public class BoredAPIResponse {
 
-    private final List<String> activities = new ArrayList<String>(Arrays.asList(new String[]{"make a site", "play chess", "bake a cake", "go out with friends"}));
+    private final List<String> activities = new ArrayList<String>(Arrays.asList(new String[]{
+            "make a site",
+            "play chess",
+            "bake a cake",
+            "go out with friends",
+            "Go cycling",
+            "listen to music",
+            "go fishing",
+            "Watch movies"}));
     private String activitySuggestion = null;
 
     public BoredAPIResponse() {
@@ -29,5 +37,12 @@ public class BoredAPIResponse {
 
     public void setActivitySuggestion(String activitySuggestion) {
         this.activitySuggestion = activitySuggestion;
+    }
+
+    @Override
+    public String toString() {
+        return "BoredAPIResponse{" +
+                "activitySuggestion='" + activitySuggestion + '\'' +
+                '}';
     }
 }

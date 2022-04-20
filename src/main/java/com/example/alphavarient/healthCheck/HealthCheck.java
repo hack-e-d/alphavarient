@@ -27,7 +27,7 @@ public class HealthCheck {
     @ResponseBody
     public HealthCheckResponse healthCheck() {
         setStatus("Available");
-        logger.log("status check call => STATUS : "+getStatus(), Logger.LoggingLevel.INFO);
+        logger.log(new HealthCheckResponse(getStatus()).toString(), Logger.LoggingLevel.INFO);
         return new HealthCheckResponse(getStatus());
     }
 }

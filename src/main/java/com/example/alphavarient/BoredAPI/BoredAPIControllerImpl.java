@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class BoredAPIControllerImpl implements BoredAPIController {
 
     public static final int MIN = 0;
-    public static final int MAX = 3;
+    public static final int MAX = 8;
 
     @Autowired
     Logger logger;
@@ -29,7 +29,7 @@ public class BoredAPIControllerImpl implements BoredAPIController {
 //        int responseNumber = 1;
         BoredAPIResponse boredAPIResponse = new BoredAPIResponse();
         boredAPIResponse.setActivitySuggestion(boredAPIResponse.getActivity(responseNumber));
-        logger.log("Activity suggestion responded : "+boredAPIResponse.getActivitySuggestion(), Logger.LoggingLevel.INFO);
+        logger.log(boredAPIResponse.toString(), Logger.LoggingLevel.INFO);
         return boredAPIResponse;
     }
 }

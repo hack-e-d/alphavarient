@@ -23,6 +23,7 @@ public class DateTimeController {
     @ResponseBody
     public DateTimeResponse getDate() {
         logger.log("Date and Time fetched", Logger.LoggingLevel.INFO);
+        logger.log(new DateTimeResponse(dateConstructor() ,timeConstructor()).toString(), Logger.LoggingLevel.INFO);
         return new DateTimeResponse(dateConstructor() ,timeConstructor());
     }
 

@@ -24,4 +24,12 @@ public class DateTimeResponse {
         Date = date;
         Time = time;
     }
+
+    @Override
+    public String toString() {
+        return "DateTimeResponse{" +
+                "Date='" + Date + '\'' +
+                ", Time='" + Time + '\'' +
+                '}';
+    }
 }

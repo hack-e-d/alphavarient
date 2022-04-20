@@ -23,6 +23,7 @@ public class ShouldIControllerImpl implements ShouldIController {
         ShouldIResponse shouldIResponse = new ShouldIResponse();
         shouldIResponse.setQuestion(question);
         shouldIResponse.setResponse(generateResponse(shouldIResponse));
+        logger.log(shouldIResponse.toString(), Logger.LoggingLevel.INFO);
         return shouldIResponse;
     }
 
@@ -32,7 +33,6 @@ public class ShouldIControllerImpl implements ShouldIController {
         int responseNumber = (int)(Math.random()*(MAX - MIN) + MIN);
         String response = shouldIResponse.getResponse(responseNumber);
 //        int responseNumber = 1;
-        logger.log("Response Given : "+ response, Logger.LoggingLevel.INFO);
         return response;
     }
 }
