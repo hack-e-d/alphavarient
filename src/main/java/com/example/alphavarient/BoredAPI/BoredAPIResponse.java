@@ -13,11 +13,16 @@ public class BoredAPIResponse {
             "make a site",
             "play chess",
             "bake a cake",
+            "cook food",
+            "watch netflix",
+            "workout",
             "go out with friends",
             "Go cycling",
             "listen to music",
             "go fishing",
-            "Watch movies"}));
+            "Watch movies",
+            "play computer games"
+    }));
     private String activitySuggestion = null;
 
     public BoredAPIResponse() {
