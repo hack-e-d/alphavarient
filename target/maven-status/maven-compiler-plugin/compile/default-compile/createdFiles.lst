@@ -1,0 +1,13 @@
+com\example\alphavarient\AlphavarientApplication.class
+com\example\alphavarient\DataTime\DateTimeController.class
+com\example\alphavarient\BoredAPI\BoredAPIControllerImpl.class
+com\example\alphavarient\healthCheck\HealthCheckResponse.class
+com\example\alphavarient\ShouldI\ShouldIResponse.class
+com\example\alphavarient\BoredAPI\BoredAPIResponse.class
+com\example\alphavarient\logging\Logger$LoggingLevel.class
+com\example\alphavarient\logging\Logger.class
+com\example\alphavarient\ShouldI\ShouldIControllerImpl.class
+com\example\alphavarient\healthCheck\HealthCheck.class
+com\example\alphavarient\DataTime\DateTimeResponse.class
+com\example\alphavarient\ShouldI\ShouldIController.class
+com\example\alphavarient\BoredAPI\BoredAPIController.class
