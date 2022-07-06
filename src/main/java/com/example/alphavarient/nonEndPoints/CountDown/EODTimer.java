@@ -2,11 +2,9 @@ package com.example.alphavarient.nonEndPoints.CountDown;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class EODTimer {
-    public Date date;
     public static final String formatter ="\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
 
     protected int findHours(long totalSeconds) {
@@ -44,16 +42,14 @@ public class EODTimer {
     }
 
     protected void DayRunner(Counter counter) throws InterruptedException {
-//        new counter not needed optimized for memory management
-//        Counter counter = new Counter();
 
         long seconds = 1;
+        LocalDateTime now = LocalDateTime.now();
         while (Integer.parseInt(String.valueOf(seconds)) != 0) {
-            seconds = counter.calculateMinutes(LocalDateTime.now());
-//            Moved the formatter outside the function
-//            System.out.print("\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"  +seconds + " Minutes to MidNight");
+            seconds = counter.calculateMinutes(now);
             displayTimer(seconds);
             TimeUnit.SECONDS.sleep(1);
+            now = now.plusSeconds(1);
         }
     }
 
@@ -74,13 +70,9 @@ public class EODTimer {
 }
 
 class Counter {
-//    Removed the unwanted variable usage
-//    public Date date = new Date();
-    public LocalDateTime today;
     public LocalDateTime endTime;
     public Counter() {
-        today = LocalDateTime.now();
-        endTime = today
+        endTime = LocalDateTime.now()
                 .withHour(17)
                 .withMinute(30)
                 .withSecond(0)
@@ -88,7 +80,6 @@ class Counter {
     }
 
     protected long calculateMinutes(LocalDateTime now) {
-//        System.out.println(now);
         return ChronoUnit.SECONDS.between(now,this.endTime);
     }
 }
